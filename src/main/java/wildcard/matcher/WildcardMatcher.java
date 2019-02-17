@@ -9,7 +9,7 @@ public class WildcardMatcher {
     private static final char WILDCARD = '*';
     private static final char ESC_CHAR = '\\';
 
-    public boolean matches(String pattern, String text) {
+    public boolean matches(String text, String pattern) {
         Objects.requireNonNull(pattern, "Pattern must not be null.");
         Objects.requireNonNull(text, "Text must not be null.");
         if (pattern.equals(text)) {
@@ -18,10 +18,10 @@ public class WildcardMatcher {
         if (pattern.isEmpty()) {
             return false;
         }
-        return matchPattern(pattern, text);
+        return matchPattern(text, pattern);
     }
 
-    private boolean matchPattern(String pattern, final String text) {
+    private boolean matchPattern(String text, String pattern) {
 //        pattern = reducePattern(pattern);
         int l = 0; // text last matching position
         // O(n), n -> pattern length
