@@ -1,3 +1,5 @@
+package suite;
+
 import com.github.peterwippermann.junit4.parameterizedsuite.ParameterContext;
 import org.junit.Test;
 import org.junit.runner.RunWith;
