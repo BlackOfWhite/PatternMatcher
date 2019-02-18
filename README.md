@@ -18,7 +18,7 @@ $ cd "Wildcard Matcher"
 $ mvn package
 ```
 
-Run executable jar from the command line:
+Run executable jar from the command line (assuming project name is "Wildcard Matcher"):
 ```
 $ cd "Wildcard Matcher\target"
 $ java -jar wildcard-matcher-1.0-SNAPSHOT.jar text pattern
